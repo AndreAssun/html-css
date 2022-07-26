@@ -1,0 +1,155 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap');/* link da fonte usada */
+
+/* Zerando CSS */
+
+* { /* esse aterisco pega todos os elementos do projeto */
+    margin: 0; /* o propio navegador coloca alguns padrões, de margem, distância da borda */
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+/* Fundo-tela */
+
+html {
+    width: 100vw; /* pegando toda a verticalmente */
+    height: 100vh;/* pegando toda tela horizontalmente. ** a tela inteira tem 100vh */
+    font-size: 62.5%;
+    color: white;
+    font-family: lato, sans-serif;
+    
+}
+
+body {
+    background:url(img/fotofundo.jpg);
+    background-position: center; /* aqui estamos centralizando a imagem, antes não configurada */
+    background-size: cover; 
+    background-position-y: 0px ; /*nao deixar bord na parte de cima*/
+    background-repeat: no-repeat; /* Não repetir a imagem */
+    
+}
+
+/* Menu - header - navbar */
+
+header {
+    width: 100%; /* Pegar altura inteira da tela */
+    height: 7vh; /* a tela inteira tem 100vh, 7 deles serão destinados ao nosso cabeçario (header)  */
+    background-color:  rgba(22, 22, 22, 0.2)  /* cor do cabeçario, aqui foi escolhido uma cor com uma leve transparencia */
+}
+
+.menu-content {
+    text-transform: uppercase;  /* uppercase para deixar as letras do menu-content maiúsculas*/
+    height: 100%; /* para o menu content pegar 100% da area do header */
+    display:flex ;/* sobre a organização do menu, do display  */
+    justify-content: space-around;
+    align-items: center;/* todos centralizados */
+    font-size: 1.4rem;
+}
+.logo{
+    font-size: 2rem;/* referente ao tamanho da letra da logo */
+    letter-spacing: 0.5rem;/* um espaçamento entre as letras da logo */
+    cursor: pointer;/* quando passa o mouse encima, fica um cursor */
+}
+.menu-content .list-itens {
+    display: flex; /* referente a organização do list itens, agora um do lado do outro */
+    list-style: none; /* tirar o estilo das bolinhas de lista, que ja vem por padrão*/
+    gap: 10px; /* distanciamento entre eles */
+}
+
+.menu-content .list-itens a {
+    text-decoration: none;
+    color: white;
+    padding: 1rem;
+    transform: 2ms ease-in; /* referente ao efeito, nesse caso 2 mili segundos de efeito*/
+    position: relative;  /* posição relative e before absolute */
+}
+.menu-content .list-itens a:before{
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0;
+    height: 1px;
+    background-color: aliceblue;
+    transition: all 1s ease;
+}
+     
+.menu-content .list-itens a:hover:before{
+    width: 100%;
+
+}
+    
+/* Centro - Conteudo principal */
+main{
+    height: 93vh; /* o head esta ocupando 7 vh, o main 93 vh. Totalizando assim, 100 vh  */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.main-content{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+}
+
+/* Texto conteudo principal */
+
+.primary-text {
+    
+    font-size: 4rem;
+    margin-bottom: 5rem;
+    text-align: center;
+
+}
+.second-text {
+
+    margin-bottom: 5rem;
+    text-transform: uppercase;
+
+}
+
+.btns {
+    display: flex;
+    justify-content: center;
+    gap: 35px;
+}
+
+.btns button {
+    width: 300px;
+    height: 50px;
+    cursor: pointer;
+    border: 1px solid white;
+    color: white;
+    text-transform: uppercase;
+    background-color: transparent;
+    font-weight: bold;
+    letter-spacing: 0.1rem;
+    border-radius: 60px;
+    position: relative;
+    transition: 1.5s;
+
+}
+
+.btns button:hover {
+    color: rgba(196, 196, 110, 0.87);
+    border: none;
+}
+
+.btns button:before {
+    content: '';
+    bottom: 0;
+    left: 0;
+    position: absolute;
+    width: 0;
+    height: 50px;
+    background-color: rgba(61, 61, 61, 0.795);
+    z-index: -1;/* para o efeito cinza ficar abaixo do texto  */
+    transition: 0.9s;
+    }
+
+    .btns button:hover:before{
+        width:100%;
+        border-radius: 60px;
+    }

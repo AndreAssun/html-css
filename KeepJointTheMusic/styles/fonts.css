@@ -1,0 +1,30 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans:wght@400;700&display=swap');
+
+@font-face {
+    font-family: poppinsitalic;
+    src: url(/components/fonts/poppins/Poppins-Italic.ttf);
+    font-weight: lighter;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: poppinsBold;
+    src: url(/components/fonts/poppins/Poppins-BoldItalic.ttf);
+    font-weight: bold;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: poppinssemibold;
+    src: url(/components/fonts/poppins/Poppins-SemiBoldItalic.ttf);
+    font-weight: bold;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: poppinsregular;
+    src: url(/components/fonts/poppins/Poppins-Regular.ttf);
+    font-weight: 100;
+    font-style: normal;
+}
